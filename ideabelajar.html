@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launcher - Penjelajah Tata Surya</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .emoji {
+            font-size: 4em;
+            margin: 20px 0;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .features {
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .feature {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-icon {
+            font-size: 1.5em;
+        }
+
+        .instructions {
+            margin-top: 30px;
+            padding: 20px;
+            background: #fff3cd;
+            border-radius: 10px;
+            border-left: 4px solid #ffc107;
+        }
+
+        .instructions h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        .instructions ol {
+            text-align: left;
+            color: #856404;
+            padding-left: 20px;
+        }
+
+        .instructions li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="emoji">🌌🪐✨</div>
+        <h1>Penjelajah Tata Surya</h1>
+        <p>Aplikasi interaktif untuk belajar tentang planet dan tata surya dengan cara yang menyenangkan!</p>
+
+        <a href="tatasurya.html" class="btn">🚀 Mulai Penjelajahan</a>
+
+        <div class="features">
+            <div class="feature">
+                <span class="feature-icon">🎨</span>
+                <span>Visual realistis dengan efek 3D</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">🔊</span>
+                <span>Penjelasan suara dalam Bahasa Indonesia</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">✨</span>
+                <span>Animasi transisi yang halus</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">📱</span>
+                <span>Responsif untuk semua perangkat</span>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>📖 Cara Menggunakan:</h3>
+            <ol>
+                <li>Klik tombol "Mulai Penjelajahan" di atas</li>
+                <li>Gunakan panah kiri/kanan atau klik planet di bawah</li>
+                <li>Klik "Dengarkan" untuk mendengar penjelasan</li>
+                <li>Nikmati perjalanan menjelajahi tata surya! 🌟</li>
+            </ol>
+        </div>
+    </div>
+</body>
+
+</html>

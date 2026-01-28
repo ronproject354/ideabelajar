@@ -1,0 +1,323 @@
+/* ===== GLASS PANEL EFFECT ===== */
+.glass-panel {
+    background: rgba(16, 19, 34, 0.6);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== GLOW EFFECTS ===== */
+.glow-effect {
+    box-shadow: 0 0 50px rgba(43, 75, 238, 0.3);
+}
+
+/* ===== ORBIT PATH ===== */
+.orbit-path {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 200px;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50% 50% 0 0;
+    z-index: 10;
+}
+
+/* ===== ANIMATED STARS BACKGROUND ===== */
+.stars {
+    background-image:
+        radial-gradient(1px 1px at 20px 30px, #eee, rgba(0, 0, 0, 0)),
+        radial-gradient(1px 1px at 100px 50px, #fff, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 200px 100px, #ddd, rgba(0, 0, 0, 0)),
+        radial-gradient(1px 1px at 300px 200px, #fff, rgba(0, 0, 0, 0)),
+        radial-gradient(1px 1px at 400px 150px, #eee, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 500px 250px, #fff, rgba(0, 0, 0, 0));
+    background-repeat: repeat;
+    background-size: 400px 400px;
+    animation: moveStars 100s linear infinite;
+}
+
+@keyframes moveStars {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -1000px 500px;
+    }
+}
+
+/* ===== SPACE BACKGROUND ===== */
+.bg-space {
+    background-image:
+        radial-gradient(ellipse at top, #1e1b4b 0%, transparent 50%),
+        radial-gradient(ellipse at bottom, #312e81 0%, transparent 50%),
+        linear-gradient(to bottom, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+}
+
+/* ===== FADE IN ANIMATION ===== */
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== PLANET ROTATION ANIMATION ===== */
+.planet-rotate {
+    animation: planetRotate 60s linear infinite;
+}
+
+@keyframes planetRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ===== PULSE ANIMATION ===== */
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* ===== PLANET SLIDER STYLES ===== */
+.planet-button {
+    transition: all 0.3s ease;
+}
+
+.planet-button:hover {
+    transform: translateY(-8px);
+}
+
+.planet-button.active {
+    transform: translateY(-20px) scale(1.1);
+}
+
+.planet-icon {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.planet-button:hover .planet-icon {
+    opacity: 1;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.planet-button.active .planet-icon {
+    border-color: var(--planet-color, #2b4bee);
+    box-shadow: 0 0 30px var(--planet-glow, rgba(43, 75, 238, 0.6));
+}
+
+/* ===== CUSTOM SCROLLBAR FOR PLANET SLIDER ===== */
+#planet-slider::-webkit-scrollbar {
+    height: 4px;
+}
+
+#planet-slider::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+}
+
+#planet-slider::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+}
+
+#planet-slider::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Prevent overflow clipping */
+#planet-slider {
+    overflow-x: auto;
+    overflow-y: visible;
+    padding-top: 30px;
+    margin-top: -30px;
+}
+
+/* ===== PERSPECTIVE FOR 3D EFFECT ===== */
+.perspective-1000 {
+    perspective: 1000px;
+}
+
+/* ===== SMOOTH TRANSITIONS ===== */
+.transition-smooth {
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== PLANET SURFACE GRADIENT OVERLAY ===== */
+.planet-gradient-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.3) 100%);
+    pointer-events: none;
+}
+
+/* ===== SPEAKING ANIMATION ===== */
+@keyframes speaking {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.speaking {
+    animation: speaking 0.6s ease-in-out infinite;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+    #planet-slider {
+        gap: 0.75rem;
+        justify-content: flex-start;
+    }
+
+    .planet-button.active {
+        transform: translateY(-15px) scale(1.05);
+    }
+}
+
+/* ===== TEXT SHADOW FOR BETTER READABILITY ===== */
+.text-shadow-glow {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* ===== LOADING ANIMATION ===== */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* ===== PLANET ENTER ANIMATION ===== */
+@keyframes planetEnter {
+    from {
+        opacity: 0;
+        transform: scale(0.8) rotateY(90deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotateY(0deg);
+    }
+}
+
+.planet-enter {
+    animation: planetEnter 1s ease-out;
+}
+
+/* ===== SLIDE TRANSITION ===== */
+.slide-left {
+    animation: slideLeft 0.8s ease-out;
+}
+
+.slide-right {
+    animation: slideRight 0.8s ease-out;
+}
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ===== PLANET ANTI-ALIASING FIX ===== */
+#planet-container {
+    /* Masking radial untuk memotong sudut "kotak" sekecil apapun */
+    -webkit-mask-image: radial-gradient(white, black);
+    mask-image: radial-gradient(white, black);
+    border-radius: 50%;
+    /* Double check */
+
+    /* Memaksa hardware acceleration & anti-aliasing */
+    transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
+}
+
+#planet-surface {
+    /* Mencegah shadow bocor keluar */
+    border-radius: 50%;
+    transform: scale(0.99);
+    /* Sedikit dikecilkan agar shadow inset aman */
+}
+
+/* ===== HIDE SCROLLBAR BUT KEEP SCROLLING ===== */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ===== QUIZ SECTION STYLES ===== */
+.quiz-option-btn {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.quiz-option-btn:not(:disabled):hover {
+    transform: translateX(8px);
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.quiz-option-btn:disabled {
+    cursor: default;
+    opacity: 0.8;
+}
+
+#quiz-overlay {
+    background: radial-gradient(circle at center, rgba(16, 19, 34, 0.5) 0%, rgba(16, 19, 34, 0.9) 100%);
+}
