@@ -260,22 +260,9 @@
 
 /* ===== PLANET ANTI-ALIASING FIX ===== */
 #planet-container {
-    /* Masking radial untuk memotong sudut "kotak" sekecil apapun */
-    -webkit-mask-image: radial-gradient(white, black);
-    mask-image: radial-gradient(white, black);
-    border-radius: 50%;
-    /* Double check */
-
-    /* Memaksa hardware acceleration & anti-aliasing */
+    /* Memaksa hardware acceleration */
     transform: translateZ(0);
     -webkit-font-smoothing: antialiased;
-}
-
-#planet-surface {
-    /* Mencegah shadow bocor keluar */
-    border-radius: 50%;
-    transform: scale(0.99);
-    /* Sedikit dikecilkan agar shadow inset aman */
 }
 
 /* ===== HIDE SCROLLBAR BUT KEEP SCROLLING ===== */

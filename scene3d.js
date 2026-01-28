@@ -18,12 +18,12 @@ function init3D() {
     scene.fog = new THREE.FogExp2(0x000000, 0.02); // Kabut hitam untuk kedalaman
 
     // 2. Camera
-    camera = new THREE.PerspectiveCamera(60, container.clientWidth / container.clientHeight, 0.1, 1000);
+    camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
     camera.position.z = 5;
 
     // 3. Renderer
     renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: "high-performance" });
-    renderer.setSize(container.clientWidth, container.clientHeight);
+    renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.shadowMap.enabled = true; // Aktifkan bayangan
     renderer.shadowMap.type = THREE.PCFSoftShadowMap; // Bayangan yang lebih lembut
